@@ -2331,62 +2331,19 @@ a{color:inherit;text-decoration:none}
 </script>
 
 
-<style id="marlowe-v27-final-truck-motion">
-/* V27 — final delivery motion: wrapper animation keeps the truck moving on iPhone too. */
+
+
+<style id="marlowe-final-truck-motion-fix">
+/* Final truck motion: SVG-native animation works consistently on desktop and iPhone/Safari. */
 #supply .marlowe-truck-motion{
-  animation:marloweTruckRoadV27 4.4s cubic-bezier(.42,0,.22,1) infinite!important;
-  transform:translateX(0);
+  transform-box:fill-box;
+  transform-origin:center;
   will-change:transform;
 }
-#supply .marlowe-truck-motion .marlowe-truck{
-  animation:none!important;
-  transform:none!important;
-  will-change:auto;
+@media (prefers-reduced-motion: reduce){
+  #supply .marlowe-truck-motion{animation:none!important;}
 }
-@media(max-width:900px){
-  #supply .marlowe-truck-motion{
-    animation:marloweTruckRoadV27Mobile 4.1s cubic-bezier(.42,0,.22,1) infinite!important;
-  }
-}
-@media(max-width:390px){
-  #supply .marlowe-truck-motion{
-    animation:marloweTruckRoadV27Small 4.1s cubic-bezier(.42,0,.22,1) infinite!important;
-  }
-}
-@keyframes marloweTruckRoadV27{
-  0%{transform:translateX(-105px)}
-  50%{transform:translateX(105px)}
-  100%{transform:translateX(-105px)}
-}
-@keyframes marloweTruckRoadV27Mobile{
-  0%{transform:translateX(-78px)}
-  50%{transform:translateX(78px)}
-  100%{transform:translateX(-78px)}
-}
-@keyframes marloweTruckRoadV27Small{
-  0%{transform:translateX(-66px)}
-  50%{transform:translateX(66px)}
-  100%{transform:translateX(-66px)}
-}
-@media(prefers-reduced-motion:reduce){#supply .marlowe-truck-motion{animation:none!important}}
 </style>
-<script id="marlowe-v27-final-truck-js">
-(function(){
-  function fix(){
-    var truck=document.querySelector('#supply .marlowe-truck');
-    var motion=document.querySelector('#supply .marlowe-truck-motion');
-    if(!truck||!motion)return;
-    if(window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
-    try{
-      truck.getAnimations().forEach(function(a){a.cancel()});
-      motion.getAnimations().forEach(function(a){a.cancel()});
-    }catch(e){}
-    truck.style.animation='none';
-    truck.style.transform='none';
-  }
-  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',fix,{once:true});else fix();
-})();
-</script>
 </head>
 <body><input aria-label="Открыть меню" id="marloweMenuToggle" type="checkbox"/>
 <header class="nav">
@@ -2643,7 +2600,9 @@ a{color:inherit;text-decoration:none}
 <path class="delivery-sun" d="M985 78 a34 34 0 1 0 0 .1"></path>
 
 <!-- truck -->
-<g class="marlowe-truck-motion"><g class="marlowe-truck">
+<g class="marlowe-truck-motion">
+<animateTransform attributeName="transform" type="translate" values="-190 0;190 0;-190 0" dur="3.6s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.5;1" keySplines=".42 0 .58 1;.42 0 .58 1"></animateTransform>
+<g class="marlowe-truck">
 <!-- compact box delivery truck -->
 <path class="truck-body" d="M382 112 H626 Q640 112 646 124 V191 H382Z"></path>
 <path class="truck-cab" d="M646 137 H704 Q720 137 731 151 L748 169 V191 H646Z"></path>
