@@ -1264,6 +1264,258 @@ a{color:inherit;text-decoration:none}
   }
 }
 </style>
+
+<style id="marlowe-mobile-v17-editorial">
+/* =========================================================
+   V17 — mobile editorial redesign
+   Desktop remains untouched. Mobile gets its own composition.
+   ========================================================= */
+@media (max-width:900px){
+
+  html{scroll-behavior:smooth}
+  body{overflow-x:hidden}
+
+  /* Header: lighter footprint, same Marlowe character */
+  header,
+  .site-header,
+  nav{
+    min-height:68px!important;
+  }
+  header{
+    padding:0 18px!important;
+  }
+
+  /* Hero */
+  .hero{
+    min-height:calc(100svh - 68px)!important;
+    padding:70px 22px 54px!important;
+  }
+  .hero h1{
+    font-size:clamp(48px,15vw,72px)!important;
+    line-height:.88!important;
+    letter-spacing:-.035em!important;
+    max-width:95%!important;
+  }
+  .hero-copy{
+    max-width:340px!important;
+    font-size:15px!important;
+    line-height:1.55!important;
+    margin-top:25px!important;
+  }
+
+  /* Sections: less vertical waste, stronger hierarchy */
+  .section{
+    padding:72px 22px!important;
+  }
+  .section-head{
+    gap:28px!important;
+  }
+  .section-head h2,
+  .philosophy h2{
+    font-size:clamp(40px,12vw,58px)!important;
+    line-height:.93!important;
+    letter-spacing:-.025em!important;
+  }
+  .section p{
+    font-size:15px!important;
+    line-height:1.62!important;
+  }
+  .lead{
+    font-size:19px!important;
+    line-height:1.35!important;
+  }
+
+  /* Small labels: readable, but still restrained */
+  .kicker,
+  .section-kicker,
+  .marlowe-delivery-caption{
+    font-size:9px!important;
+    letter-spacing:.19em!important;
+    opacity:1!important;
+  }
+
+  /* PRODUCTION — illustration becomes a visual chapter */
+  #production .marlowe-craft-animation{
+    width:calc(100% + 30px)!important;
+    margin:12px -15px 30px!important;
+    min-height:190px!important;
+    display:flex!important;
+    align-items:center!important;
+    justify-content:center!important;
+    overflow:hidden!important;
+  }
+  #production .marlowe-craft-svg{
+    width:112%!important;
+    max-width:none!important;
+    height:auto!important;
+  }
+
+  /* SUPPLY — bigger truck, tighter scene */
+  #supply .marlowe-delivery-animation{
+    width:calc(100% + 28px)!important;
+    margin:12px -14px 18px!important;
+    padding:0!important;
+    overflow:hidden!important;
+  }
+  #supply .marlowe-delivery-caption{
+    padding:0 14px!important;
+    margin-bottom:4px!important;
+    color:#704a25!important;
+  }
+  #supply .marlowe-delivery-svg{
+    width:100%!important;
+    height:auto!important;
+    min-height:0!important;
+    display:block!important;
+  }
+  #supply .marlowe-truck{
+    transform-box:fill-box!important;
+    transform-origin:center center!important;
+    transform:scale(1.72)!important;
+    animation:marLowMobileTruck 5.8s ease-in-out infinite!important;
+  }
+  #supply .truck-logo-panel{
+    x:395px!important;
+    width:212px!important;
+  }
+  #supply .truck-logo{
+    x:501px!important;
+    textLength:168!important;
+    font-size:14px!important;
+    letter-spacing:0!important;
+  }
+  #supply .truck-sub{
+    x:501px!important;
+    textLength:108!important;
+    font-size:4.6px!important;
+    letter-spacing:.25px!important;
+  }
+
+  /* Supply copy — avoid giant blank transitions */
+  #supply{
+    padding-bottom:48px!important;
+  }
+  #supply .section-head{
+    margin-bottom:20px!important;
+  }
+
+  /* Territory / locations: descriptions get real reading size */
+  #territory .service p,
+  #territory .location p{
+    font-size:16px!important;
+    line-height:1.55!important;
+  }
+  #territory .service{
+    padding:22px 0!important;
+  }
+
+  /* Wine cards */
+  #wine article p,
+  #wine .wine-description,
+  #wine .wine-meta{
+    font-size:15px!important;
+    line-height:1.55!important;
+  }
+  #wine .mw-wine-type{
+    color:#704a25!important;
+    opacity:1!important;
+  }
+
+  /* Journal cards: elegant stacked editorial layout */
+  .journal-grid{
+    display:grid!important;
+    grid-template-columns:1fr!important;
+    gap:0!important;
+  }
+  .journal-grid article{
+    padding:30px 0!important;
+    border-bottom:1px solid rgba(55,42,33,.18)!important;
+  }
+  .journal-grid article h3{
+    font-size:30px!important;
+    line-height:1.08!important;
+    margin:9px 0 14px!important;
+  }
+  .journal-grid article p{
+    font-size:15px!important;
+    line-height:1.55!important;
+  }
+
+  /* Mobile menu — compact, premium, closes naturally on navigation */
+  .mobile-menu,
+  .mobile-nav,
+  .menu-overlay{
+    max-height:100svh!important;
+    overflow-y:auto!important;
+    -webkit-overflow-scrolling:touch;
+  }
+  .mobile-section-link a{
+    font-size:27px!important;
+    line-height:1.08!important;
+    padding:11px 0!important;
+  }
+
+  /* Contact stays in the menu, not in the desktop header */
+  .mobile-contact,
+  .mobile-menu .contact-link{
+    font-size:18px!important;
+    margin-top:18px!important;
+  }
+
+  /* Footer credit requested by user */
+  footer{
+    padding:42px 22px 34px!important;
+  }
+  .impala-credit{
+    font-size:11px!important;
+    line-height:1.55!important;
+    letter-spacing:.045em!important;
+  }
+
+  /* Subtle reveal — premium, not flashy */
+  .reveal{
+    opacity:1!important;
+    transform:none!important;
+  }
+  .reveal.in-view{
+    animation:marloweMobileReveal .75s cubic-bezier(.2,.7,.2,1) both;
+  }
+
+  /* Preserve legibility of gold accents on cream */
+  section:not(.dark) .kicker,
+  section:not(.dark) .mw-wine-type,
+  section:not(.dark) .section-kicker{
+    color:#704a25!important;
+    opacity:1!important;
+  }
+}
+
+@keyframes marLowMobileTruck{
+  0%,100%{transform:scale(1.72) translateX(-5px)}
+  50%{transform:scale(1.72) translateX(5px)}
+}
+@keyframes marloweMobileReveal{
+  from{opacity:0;transform:translateY(18px)}
+  to{opacity:1;transform:translateY(0)}
+}
+
+@media(max-width:390px){
+  #supply .marlowe-truck{
+    transform:scale(1.60)!important;
+  }
+  @keyframes marLowMobileTruck{
+    0%,100%{transform:scale(1.60) translateX(-4px)}
+    50%{transform:scale(1.60) translateX(4px)}
+  }
+  .hero{padding-left:19px!important;padding-right:19px!important}
+  .section{padding-left:19px!important;padding-right:19px!important}
+}
+
+@media(prefers-reduced-motion:reduce){
+  .reveal.in-view{animation:none!important}
+  #supply .marlowe-truck{animation:none!important}
+}
+</style>
 </head>
 <body><input aria-label="Открыть меню" id="marloweMenuToggle" type="checkbox"/>
 <header class="nav">
@@ -1575,7 +1827,9 @@ a{color:inherit;text-decoration:none}
 <p class="lead" style="margin:0 auto;max-width:700px">Вино. Гостеприимство. Место, в котором хочется остаться.</p>
 </section>
 </main>
-<footer class="footer"><span>Marlowe Winery</span><span>Вино · Наследие · Резиденция</span><span>© 2026</span><div class="impala-credit">Сайт сделан руками <strong>IMPALA</strong> · Discord: <span>impala0500</span></div></footer>
+<footer class="footer"><span>Marlowe Winery</span><span>Вино · Наследие · Резиденция</span><span>© 2026</span><div class="impala-credit">Сайт сделан руками <strong>IMPALA</strong> · Discord: <span>impala0500</span></div>
+<div class="impala-credit">Сайт сделан руками <strong>IMPALA</strong>. Discord: impala0500.</div>
+</footer>
 <script>const io=new IntersectionObserver((entries)=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});document.querySelectorAll('.reveal').forEach(el=>io.observe(el));</script>
 <script id="marlowe-scroll-progress">
 (function(){
