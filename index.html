@@ -1099,8 +1099,6 @@ a{color:inherit;text-decoration:none}
   50% { transform: translateX(4px) translateY(-1px); }
 }
 </style>
-
-
 <style id="marlowe-mobile-v15-clean">
 /* V15 — mobile refinement: make the delivery illustration a real visual feature. */
 @media (max-width:900px){
@@ -1227,7 +1225,6 @@ a{color:inherit;text-decoration:none}
   .marlowe-truck,.marlowe-craft-svg *{animation:none!important}
 }
 </style>
-
 <style id="marlowe-truck-brand-final">
 /* FINAL TRUCK BRANDING FIX — text is intentionally narrower than the panel. */
 #supply .marlowe-truck .truck-logo-panel{
@@ -1264,7 +1261,6 @@ a{color:inherit;text-decoration:none}
   }
 }
 </style>
-
 <style id="marlowe-mobile-v17-editorial">
 /* =========================================================
    V17 — mobile editorial redesign
@@ -1516,6 +1512,881 @@ a{color:inherit;text-decoration:none}
   #supply .marlowe-truck{animation:none!important}
 }
 </style>
+<style id="marlowe-mobile-v18-premium">
+@media (max-width:900px){
+
+  /* ===== Overall rhythm ===== */
+  body{
+    -webkit-font-smoothing:antialiased!important;
+    text-rendering:optimizeLegibility!important;
+  }
+  .section{
+    padding-top:64px!important;
+    padding-bottom:64px!important;
+  }
+  .section-head{
+    margin-bottom:28px!important;
+  }
+
+  /* ===== Hero: image first, typography second ===== */
+  .hero{
+    min-height:calc(100svh - 68px)!important;
+    padding:56px 20px 46px!important;
+    display:flex!important;
+    flex-direction:column!important;
+    justify-content:flex-end!important;
+  }
+  .hero h1{
+    font-size:clamp(50px,14.5vw,70px)!important;
+    line-height:.86!important;
+    letter-spacing:-.045em!important;
+    margin:12px 0 0!important;
+  }
+  .hero-copy{
+    font-size:15px!important;
+    line-height:1.52!important;
+    max-width:330px!important;
+    margin-top:20px!important;
+  }
+
+  /* ===== Menu: full-screen editorial panel ===== */
+  .mobile-menu,
+  .mobile-nav{
+    background:#241811!important;
+    padding:76px 24px 34px!important;
+  }
+  .mobile-section-link{
+    border-bottom:1px solid rgba(241,234,223,.16)!important;
+  }
+  .mobile-section-link a{
+    display:block!important;
+    font-size:30px!important;
+    line-height:1!important;
+    padding:14px 0!important;
+    transition:transform .35s ease,opacity .35s ease!important;
+  }
+  .mobile-section-link a:active{
+    transform:translateX(5px)!important;
+  }
+
+  /* ===== Editorial section headings ===== */
+  .section-head h2,
+  .philosophy h2{
+    font-size:clamp(39px,11.8vw,56px)!important;
+    line-height:.91!important;
+    letter-spacing:-.028em!important;
+  }
+  .lead{
+    font-size:19px!important;
+    line-height:1.36!important;
+  }
+  .section p{
+    font-size:15.5px!important;
+    line-height:1.62!important;
+  }
+
+  /* ===== Production: visual feature, but restrained ===== */
+  #production .marlowe-craft-animation{
+    width:calc(100% + 44px)!important;
+    margin:4px -22px 28px!important;
+    min-height:205px!important;
+    display:flex!important;
+    align-items:center!important;
+    justify-content:center!important;
+  }
+  #production .marlowe-craft-svg{
+    width:116%!important;
+    max-width:none!important;
+  }
+
+  /* ===== Supply: truck is larger, route remains delicate ===== */
+  #supply .marlowe-delivery-animation{
+    width:calc(100% + 38px)!important;
+    margin:8px -19px 16px!important;
+    overflow:hidden!important;
+  }
+  #supply .marlowe-delivery-svg{
+    width:100%!important;
+    height:auto!important;
+  }
+  #supply .marlowe-truck{
+    transform-box:fill-box!important;
+    transform-origin:center center!important;
+    animation:marloweV18Truck 5.8s ease-in-out infinite!important;
+  }
+  #supply .truck-logo-panel{
+    x:395px!important;
+    width:212px!important;
+  }
+  #supply .truck-logo{
+    x:501px!important;
+    textLength:168!important;
+    font-size:14px!important;
+    letter-spacing:0!important;
+  }
+  #supply .truck-sub{
+    x:501px!important;
+    textLength:108!important;
+    font-size:4.6px!important;
+  }
+
+  /* ===== Territory: readable descriptions ===== */
+  #territory .service,
+  #territory .location{
+    padding:24px 0!important;
+  }
+  #territory .service p,
+  #territory .location p{
+    font-size:16px!important;
+    line-height:1.55!important;
+    max-width:100%!important;
+  }
+
+  /* ===== Wine: clear type + description hierarchy ===== */
+  #wine .mw-wine-type{
+    font-size:10px!important;
+    letter-spacing:.16em!important;
+    color:#704a25!important;
+    opacity:1!important;
+  }
+  #wine article h3,
+  #wine .wine-name{
+    font-size:29px!important;
+    line-height:1.05!important;
+  }
+  #wine article p,
+  #wine .wine-description,
+  #wine .wine-meta{
+    font-size:15px!important;
+    line-height:1.55!important;
+  }
+
+  /* ===== Journal ===== */
+  .journal-grid article{
+    padding:28px 0!important;
+  }
+  .journal-grid article h3{
+    font-size:29px!important;
+    line-height:1.08!important;
+  }
+
+  /* ===== Supply CTA ===== */
+  #supply a{
+    text-underline-offset:6px!important;
+    text-decoration-thickness:1px!important;
+  }
+
+  /* ===== Scroll reveals ===== */
+  .marlowe-v18-reveal{
+    opacity:0!important;
+    transform:translateY(18px)!important;
+    transition:opacity .75s cubic-bezier(.2,.7,.2,1),
+               transform .75s cubic-bezier(.2,.7,.2,1)!important;
+  }
+  .marlowe-v18-reveal.marlowe-v18-visible{
+    opacity:1!important;
+    transform:none!important;
+  }
+
+  /* ===== Footer ===== */
+  footer{
+    padding:44px 20px 36px!important;
+  }
+  .impala-credit{
+    font-size:11px!important;
+    line-height:1.55!important;
+    letter-spacing:.045em!important;
+  }
+}
+
+@media(max-width:390px){
+  .hero{padding-left:18px!important;padding-right:18px!important}
+  .section{padding-left:19px!important;padding-right:19px!important}
+  #production .marlowe-craft-svg{width:120%!important}
+  #supply .marlowe-truck{
+    animation:marloweV18TruckSmall 5.8s ease-in-out infinite!important;
+  }
+}
+
+@keyframes marloweV18Truck{
+  0%,100%{transform:scale(1.76) translateX(-5px)}
+  50%{transform:scale(1.76) translateX(5px)}
+}
+@keyframes marloweV18TruckSmall{
+  0%,100%{transform:scale(1.63) translateX(-4px)}
+  50%{transform:scale(1.63) translateX(4px)}
+}
+
+@media(prefers-reduced-motion:reduce){
+  .marlowe-v18-reveal{
+    opacity:1!important;
+    transform:none!important;
+    transition:none!important;
+  }
+  #supply .marlowe-truck{animation:none!important}
+}
+</style>
+
+<style id="marlowe-mobile-v20-final">
+/* V20 — final mobile reconstruction.
+   Desktop is intentionally untouched. */
+@media (max-width: 900px){
+
+  /* ---------- MOBILE HEADER ---------- */
+  .nav{
+    height:68px!important;
+    min-height:68px!important;
+    padding:0 18px!important;
+    justify-content:flex-end!important;
+    background:rgba(36,24,17,.97)!important;
+    backdrop-filter:blur(18px)!important;
+    -webkit-backdrop-filter:blur(18px)!important;
+  }
+
+  /* The desktop navigation must NEVER remain visible on phones. */
+  .nav > .menu,
+  .nav > .nav-contact{
+    display:none!important;
+  }
+
+  #marloweMenuToggle{
+    position:absolute!important;
+    width:1px!important;
+    height:1px!important;
+    opacity:0!important;
+    pointer-events:none!important;
+  }
+
+  .mobile-menu-btn{
+    position:absolute!important;
+    z-index:80!important;
+    right:18px!important;
+    top:50%!important;
+    transform:translateY(-50%)!important;
+    width:46px!important;
+    height:42px!important;
+    display:flex!important;
+    flex-direction:column!important;
+    align-items:center!important;
+    justify-content:center!important;
+    gap:7px!important;
+    border:1px solid rgba(248,241,231,.38)!important;
+    border-radius:999px!important;
+    background:rgba(255,255,255,.035)!important;
+    cursor:pointer!important;
+  }
+
+  .mobile-menu-btn span{
+    display:block!important;
+    width:18px!important;
+    height:1.5px!important;
+    background:#f8f1e7!important;
+    transition:transform .3s ease,opacity .25s ease!important;
+  }
+
+  #marloweMenuToggle:checked ~ .nav .mobile-menu-btn span:first-child{
+    transform:translateY(4.25px) rotate(45deg)!important;
+  }
+  #marloweMenuToggle:checked ~ .nav .mobile-menu-btn span:last-child{
+    transform:translateY(-4.25px) rotate(-45deg)!important;
+  }
+
+  /* ---------- MOBILE DRAWER ---------- */
+  .mobile-drawer{
+    position:fixed!important;
+    z-index:70!important;
+    top:68px!important;
+    left:0!important;
+    right:0!important;
+    bottom:0!important;
+    display:block!important;
+    visibility:hidden!important;
+    opacity:0!important;
+    pointer-events:none!important;
+    overflow-y:auto!important;
+    -webkit-overflow-scrolling:touch!important;
+    background:#241811!important;
+    transform:translateY(-10px)!important;
+    transition:opacity .28s ease,transform .32s ease,visibility .32s ease!important;
+  }
+
+  #marloweMenuToggle:checked ~ .mobile-drawer{
+    visibility:visible!important;
+    opacity:1!important;
+    pointer-events:auto!important;
+    transform:none!important;
+  }
+
+  .mobile-drawer-inner{
+    min-height:100%!important;
+    padding:24px 22px 34px!important;
+    display:flex!important;
+    flex-direction:column!important;
+  }
+
+  .mobile-drawer-close{
+    display:none!important;
+  }
+
+  .mobile-label{
+    display:block!important;
+    margin:2px 0 18px!important;
+    color:#c8a36b!important;
+    font:600 9px/1.4 Manrope,Arial,sans-serif!important;
+    letter-spacing:.22em!important;
+    text-transform:uppercase!important;
+  }
+
+  .mobile-drawer-inner .mobile-section-link{
+    display:block!important;
+    width:100%!important;
+    margin:0!important;
+    padding:0!important;
+    border:0!important;
+  }
+
+  .mobile-drawer-inner .mobile-section-link a{
+    display:block!important;
+    width:100%!important;
+    padding:13px 0!important;
+    color:#f8f1e7!important;
+    border-bottom:1px solid rgba(248,241,231,.13)!important;
+    font:500 clamp(27px,8vw,34px)/1 "Cormorant Garamond",Georgia,serif!important;
+    letter-spacing:-.015em!important;
+    text-decoration:none!important;
+  }
+
+  .mobile-drawer-inner .mobile-section-link a:active{
+    opacity:.68!important;
+    transform:translateX(4px)!important;
+  }
+
+  .mobile-drawer-inner .mobile-contact-link{
+    display:block!important;
+    margin:22px 0 0!important;
+    padding:13px 0!important;
+    color:#d8b77f!important;
+    border-bottom:1px solid rgba(216,183,127,.45)!important;
+    font:600 13px/1.4 Manrope,Arial,sans-serif!important;
+    letter-spacing:.09em!important;
+    text-transform:uppercase!important;
+  }
+
+  /* ---------- GLOBAL MOBILE TYPE ---------- */
+  html{
+    overflow-x:hidden!important;
+  }
+
+  body{
+    width:100%!important;
+    max-width:100%!important;
+    overflow-x:hidden!important;
+    background:var(--cream)!important;
+    color:var(--ink)!important;
+  }
+
+  .hero{
+    min-height:calc(100svh - 68px)!important;
+    height:auto!important;
+    padding:82px 20px 48px!important;
+  }
+
+  .hero-content{
+    left:0!important;
+    right:0!important;
+    bottom:0!important;
+    padding:0 20px 62px!important;
+  }
+
+  .hero h1{
+    font-size:clamp(48px,15vw,68px)!important;
+    line-height:.88!important;
+    margin:12px 0 20px!important;
+  }
+
+  .hero-copy{
+    max-width:330px!important;
+    font-size:16px!important;
+    line-height:1.48!important;
+  }
+
+  .section{
+    width:100%!important;
+    max-width:100%!important;
+    padding:62px 20px!important;
+    overflow:hidden!important;
+  }
+
+  .section-head{
+    margin-bottom:30px!important;
+  }
+
+  .section-head h2,
+  .philosophy h2,
+  .section h2{
+    font-size:clamp(38px,11.5vw,54px)!important;
+    line-height:.94!important;
+    letter-spacing:-.025em!important;
+  }
+
+  .lead{
+    font-size:18px!important;
+    line-height:1.38!important;
+  }
+
+  .section p,
+  .body,
+  .history-text{
+    font-size:15.5px!important;
+    line-height:1.62!important;
+  }
+
+  /* Gold labels on cream were too faint. */
+  section:not(.dark) .kicker,
+  section:not(.dark) .section-kicker,
+  section:not(.dark) .mw-wine-type,
+  section:not(.dark) .journal-grid span,
+  section:not(.dark) .event-grid span{
+    color:#765127!important;
+    opacity:1!important;
+  }
+
+  /* Never render gold body text on the cream background. */
+  section:not(.dark) .body,
+  section:not(.dark) .lead,
+  section:not(.dark) p{
+    color:rgba(48,33,22,.78)!important;
+  }
+
+  /* ---------- PRODUCTION ANIMATION ---------- */
+  #production .marlowe-craft-animation{
+    width:calc(100% + 42px)!important;
+    margin:4px -21px 26px!important;
+    min-height:210px!important;
+    overflow:hidden!important;
+    display:flex!important;
+    align-items:center!important;
+    justify-content:center!important;
+  }
+
+  #production .marlowe-craft-svg{
+    width:128%!important;
+    max-width:none!important;
+    height:auto!important;
+    display:block!important;
+  }
+
+  /* ---------- SUPPLY / TRUCK ---------- */
+  #supply{
+    padding-bottom:42px!important;
+  }
+
+  #supply .two{
+    margin-top:6px!important;
+  }
+
+  #supply .two > div{
+    padding:28px 0!important;
+  }
+
+  #supply .marlowe-delivery-animation{
+    width:calc(100% + 56px)!important;
+    margin:10px -28px 4px!important;
+    padding:0!important;
+    overflow:hidden!important;
+  }
+
+  #supply .marlowe-delivery-caption{
+    padding:0 28px!important;
+    margin:0 0 5px!important;
+    color:#765127!important;
+    font-size:9px!important;
+    letter-spacing:.2em!important;
+    opacity:1!important;
+  }
+
+  #supply .marlowe-delivery-svg{
+    width:128%!important;
+    max-width:none!important;
+    height:auto!important;
+    min-height:0!important;
+    display:block!important;
+    margin-left:-14%!important;
+    overflow:visible!important;
+  }
+
+  /* Bigger scene + proportional truck. */
+  #supply .marlowe-truck{
+    transform-box:fill-box!important;
+    transform-origin:center center!important;
+    animation:marloweV20Truck 5.8s ease-in-out infinite!important;
+  }
+
+  /* The panel is deliberately wider than the lettering. */
+  #supply .truck-logo-panel{
+    x:391px!important;
+    width:220px!important;
+  }
+
+  #supply .truck-logo{
+    x:501px!important;
+    textLength:168!important;
+    font-size:14px!important;
+    letter-spacing:0!important;
+    length-adjust:spacingAndGlyphs!important;
+    fill:#35271e!important;
+    white-space:nowrap!important;
+  }
+
+  #supply .truck-sub{
+    x:501px!important;
+    textLength:108px!important;
+    font-size:4.6px!important;
+    letter-spacing:.25px!important;
+    length-adjust:spacingAndGlyphs!important;
+    fill:#6f4a2a!important;
+    white-space:nowrap!important;
+  }
+
+  /* ---------- TERRITORY ---------- */
+  #territory .service,
+  #territory .location{
+    padding:22px 0!important;
+  }
+
+  #territory .service p,
+  #territory .location p{
+    font-size:16px!important;
+    line-height:1.58!important;
+    max-width:none!important;
+    color:rgba(48,33,22,.78)!important;
+  }
+
+  /* ---------- WINE / JOURNAL ---------- */
+  #wine .mw-wine-type{
+    font-size:10px!important;
+    letter-spacing:.16em!important;
+    color:#765127!important;
+    opacity:1!important;
+  }
+
+  #wine .mw-wine-name,
+  #wine article h3{
+    font-size:28px!important;
+    line-height:1.08!important;
+  }
+
+  #wine .mw-wine-desc,
+  #wine article p{
+    font-size:15px!important;
+    line-height:1.58!important;
+  }
+
+  .journal-grid{
+    grid-template-columns:1fr!important;
+  }
+
+  .journal-grid article{
+    padding:28px 0!important;
+  }
+
+  .journal-grid article h3{
+    font-size:28px!important;
+    line-height:1.08!important;
+  }
+
+  .journal-grid article p{
+    font-size:15px!important;
+    line-height:1.58!important;
+  }
+
+  /* ---------- FOOTER ---------- */
+  .footer{
+    width:100%!important;
+    padding:34px 20px 28px!important;
+    display:flex!important;
+    flex-direction:column!important;
+    align-items:center!important;
+    gap:10px!important;
+    text-align:center!important;
+  }
+
+  .impala-credit{
+    margin-top:8px!important;
+    color:rgba(216,200,181,.82)!important;
+    font:500 11px/1.55 Manrope,Arial,sans-serif!important;
+    letter-spacing:.035em!important;
+  }
+
+  .impala-credit strong{
+    color:#d8b77f!important;
+    font-weight:600!important;
+  }
+
+  /* Keep the page from feeling like it has giant empty transitions. */
+  #supply .section-head{
+    margin-bottom:22px!important;
+  }
+
+  /* Disable old reveal opacity traps on local/mobile rendering. */
+  .marlowe-v18-reveal,
+  .reveal{
+    opacity:1!important;
+    transform:none!important;
+  }
+}
+
+@media (max-width:390px){
+  .mobile-drawer-inner{
+    padding-left:18px!important;
+    padding-right:18px!important;
+  }
+
+  .mobile-drawer-inner .mobile-section-link a{
+    font-size:28px!important;
+    padding:12px 0!important;
+  }
+
+  .section{
+    padding-left:18px!important;
+    padding-right:18px!important;
+  }
+
+  #production .marlowe-craft-svg{
+    width:136%!important;
+  }
+
+  #supply .marlowe-delivery-svg{
+    width:136%!important;
+    margin-left:-18%!important;
+  }
+
+  #supply .marlowe-truck{
+    animation:marloweV20TruckSmall 5.8s ease-in-out infinite!important;
+  }
+}
+
+@keyframes marloweV20Truck{
+  0%,100%{transform:scale(1.72) translateX(-5px)}
+  50%{transform:scale(1.72) translateX(5px)}
+}
+
+@keyframes marloweV20TruckSmall{
+  0%,100%{transform:scale(1.58) translateX(-4px)}
+  50%{transform:scale(1.58) translateX(4px)}
+}
+
+@media (prefers-reduced-motion:reduce){
+  #supply .marlowe-truck{
+    animation:none!important;
+  }
+}
+</style>
+
+
+<style id="marlowe-v24-truck-motion-and-wheel-fix">
+/* FINAL MOBILE DELIVERY FIX: identical wheel colors + clearly visible but elegant motion. */
+@media (max-width:900px){
+  #supply .marlowe-truck .truck-wheel.outer{
+    fill:#f1eadf!important; stroke:#35271e!important; stroke-width:3.5!important;
+  }
+  #supply .marlowe-truck .truck-wheel.inner{
+    fill:#a6783d!important; stroke:none!important;
+  }
+  #supply .marlowe-truck{
+    animation:marloweV24Truck 3.8s ease-in-out infinite!important;
+  }
+}
+@media (max-width:390px){
+  #supply .marlowe-truck{
+    animation:marloweV24TruckSmall 3.8s ease-in-out infinite!important;
+  }
+}
+@keyframes marloweV24Truck{
+  0%,100%{transform:scale(1.72) translateX(-14px)}
+  50%{transform:scale(1.72) translateX(14px)}
+}
+@keyframes marloweV24TruckSmall{
+  0%,100%{transform:scale(1.58) translateX(-12px)}
+  50%{transform:scale(1.58) translateX(12px)}
+}
+@media (prefers-reduced-motion:reduce){#supply .marlowe-truck{animation:none!important}}
+</style>
+
+<style id="marlowe-final-delivery-motion-v25">
+/* FINAL V25 — active delivery motion + shimmering sun rays. */
+#supply .marlowe-delivery-animation .delivery-sun-rays{
+  fill:none;
+  stroke:#a6783d;
+  stroke-width:2;
+  stroke-linecap:round;
+  opacity:.48;
+  transform-box:fill-box;
+  transform-origin:center;
+  animation:marloweSunRaySpin 3.2s ease-in-out infinite;
+}
+#supply .marlowe-delivery-animation .delivery-sun-rays path{
+  animation:marloweSunRayGlint 1.6s ease-in-out infinite;
+}
+#supply .marlowe-delivery-animation .delivery-sun-rays path:nth-child(2){animation-delay:.2s}
+#supply .marlowe-delivery-animation .delivery-sun-rays path:nth-child(3){animation-delay:.4s}
+#supply .marlowe-delivery-animation .delivery-sun-rays path:nth-child(4){animation-delay:.6s}
+#supply .marlowe-delivery-animation .delivery-sun-rays path:nth-child(5){animation-delay:.8s}
+#supply .marlowe-delivery-animation .delivery-sun-rays path:nth-child(6){animation-delay:1s}
+#supply .marlowe-delivery-animation .delivery-sun-rays path:nth-child(7){animation-delay:1.2s}
+#supply .marlowe-delivery-animation .delivery-sun-rays path:nth-child(8){animation-delay:1.4s}
+
+/* The truck should read as moving, not gently rocking in place. */
+@media (min-width:901px){
+  #supply .marlowe-truck{
+    animation:marloweTruckActiveDesktop 3.2s cubic-bezier(.45,0,.55,1) infinite!important;
+  }
+}
+@media (max-width:900px){
+  #supply .marlowe-truck{
+    animation:marloweTruckActiveMobile 3.2s cubic-bezier(.45,0,.55,1) infinite!important;
+  }
+}
+
+@keyframes marloweTruckActiveDesktop{
+  0%{transform:translateX(-34px) translateY(0)}
+  45%{transform:translateX(34px) translateY(-.5px)}
+  55%{transform:translateX(34px) translateY(-.5px)}
+  100%{transform:translateX(-34px) translateY(0)}
+}
+@keyframes marloweTruckActiveMobile{
+  0%{transform:scale(1.72) translateX(-24px) translateY(0)}
+  45%{transform:scale(1.72) translateX(24px) translateY(-.5px)}
+  55%{transform:scale(1.72) translateX(24px) translateY(-.5px)}
+  100%{transform:scale(1.72) translateX(-24px) translateY(0)}
+}
+@media(max-width:390px){
+  #supply .marlowe-truck{animation:marloweTruckActiveMobileSmall 3.2s cubic-bezier(.45,0,.55,1) infinite!important}
+  @keyframes marloweTruckActiveMobileSmall{
+    0%{transform:scale(1.58) translateX(-21px) translateY(0)}
+    45%{transform:scale(1.58) translateX(21px) translateY(-.5px)}
+    55%{transform:scale(1.58) translateX(21px) translateY(-.5px)}
+    100%{transform:scale(1.58) translateX(-21px) translateY(0)}
+  }
+}
+@keyframes marloweSunRaySpin{
+  0%{transform:rotate(-4deg) scale(.96);opacity:.32}
+  50%{transform:rotate(4deg) scale(1.04);opacity:.62}
+  100%{transform:rotate(-4deg) scale(.96);opacity:.32}
+}
+@keyframes marloweSunRayGlint{
+  0%,100%{opacity:.28;stroke-width:1.3}
+  50%{opacity:.9;stroke-width:2.2}
+}
+@media(prefers-reduced-motion:reduce){
+  #supply .marlowe-truck,.delivery-sun-rays,.delivery-sun-rays path{animation:none!important}
+}
+</style>
+
+<style id="marlowe-final-v26-delivery-polish">
+#supply .marlowe-delivery-animation .delivery-sun-rays{
+  transform:none!important; transform-box:initial!important; transform-origin:initial!important;
+  fill:none!important; stroke:#a6783d!important; stroke-width:2.1!important;
+  stroke-linecap:round!important; opacity:.68!important;
+}
+#supply .marlowe-delivery-animation .delivery-sun-rays path{
+  animation:marloweSunRayShimmer 1.9s ease-in-out infinite!important; transform:none!important;
+}
+#supply .marlowe-delivery-animation .delivery-sun-rays path:nth-child(2){animation-delay:-.95s!important}
+#supply .marlowe-delivery-animation .delivery-sun-rays path:nth-child(3){animation-delay:-.48s!important}
+#supply .marlowe-delivery-animation .delivery-sun-rays path:nth-child(4){animation-delay:-1.42s!important}
+#supply .marlowe-delivery-animation .delivery-sun-rays path:nth-child(5){animation-delay:-.24s!important}
+#supply .marlowe-delivery-animation .delivery-sun-rays path:nth-child(6){animation-delay:-1.18s!important}
+#supply .marlowe-delivery-animation .delivery-sun-rays path:nth-child(7){animation-delay:-.71s!important}
+#supply .marlowe-delivery-animation .delivery-sun-rays path:nth-child(8){animation-delay:-1.66s!important}
+@keyframes marloweSunRayShimmer{0%,100%{opacity:.28;stroke-width:1.4}50%{opacity:.95;stroke-width:2.4}}
+@media (min-width:901px){#supply .marlowe-truck{animation:marloweTruckTravelV26 2.25s cubic-bezier(.55,0,.25,1) infinite!important}}
+@media (max-width:900px){#supply .marlowe-truck{animation:marloweTruckTravelV26Mobile 2.25s cubic-bezier(.55,0,.25,1) infinite!important}}
+@keyframes marloweTruckTravelV26{0%{transform:translateX(-72px)}45%{transform:translateX(72px)}55%{transform:translateX(72px)}100%{transform:translateX(-72px)}}
+@keyframes marloweTruckTravelV26Mobile{0%{transform:scale(1.72) translateX(-52px)}45%{transform:scale(1.72) translateX(52px)}55%{transform:scale(1.72) translateX(52px)}100%{transform:scale(1.72) translateX(-52px)}}
+@media(max-width:390px){#supply .marlowe-truck{animation:marloweTruckTravelV26Small 2.25s cubic-bezier(.55,0,.25,1) infinite!important}@keyframes marloweTruckTravelV26Small{0%{transform:scale(1.58) translateX(-46px)}45%{transform:scale(1.58) translateX(46px)}55%{transform:scale(1.58) translateX(46px)}100%{transform:scale(1.58) translateX(-46px)}}}
+@media(prefers-reduced-motion:reduce){#supply .marlowe-truck{animation:none!important}#supply .marlowe-delivery-animation .delivery-sun-rays path{animation:none!important;opacity:.62!important}}
+</style>
+<script id="marlowe-final-v26-motion-fallback">
+(function(){
+  if(window.__marloweV26Motion)return; window.__marloweV26Motion=true;
+  function start(){
+    var truck=document.querySelector('#supply .marlowe-truck');
+    if(!truck||!truck.animate)return;
+    if(window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+    try{
+      truck.style.animation='none';
+      var mobile=window.matchMedia('(max-width: 900px)').matches, small=window.matchMedia('(max-width: 390px)').matches;
+      var scale=mobile?(small?1.58:1.72):1, travel=mobile?(small?46:52):72;
+      truck.animate([
+        {transform:'scale('+scale+') translateX('+(-travel)+'px)'},
+        {transform:'scale('+scale+') translateX('+travel+'px)'},
+        {transform:'scale('+scale+') translateX('+travel+'px)'},
+        {transform:'scale('+scale+') translateX('+(-travel)+'px)'}
+      ],{duration:2250,iterations:Infinity,easing:'cubic-bezier(.55,0,.25,1)'});
+    }catch(e){}
+  }
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',start,{once:true});else start();
+})();
+</script>
+
+
+<style id="marlowe-v27-final-truck-motion">
+/* V27 — final delivery motion: wrapper animation keeps the truck moving on iPhone too. */
+#supply .marlowe-truck-motion{
+  animation:marloweTruckRoadV27 4.4s cubic-bezier(.42,0,.22,1) infinite!important;
+  transform:translateX(0);
+  will-change:transform;
+}
+#supply .marlowe-truck-motion .marlowe-truck{
+  animation:none!important;
+  transform:none!important;
+  will-change:auto;
+}
+@media(max-width:900px){
+  #supply .marlowe-truck-motion{
+    animation:marloweTruckRoadV27Mobile 4.1s cubic-bezier(.42,0,.22,1) infinite!important;
+  }
+}
+@media(max-width:390px){
+  #supply .marlowe-truck-motion{
+    animation:marloweTruckRoadV27Small 4.1s cubic-bezier(.42,0,.22,1) infinite!important;
+  }
+}
+@keyframes marloweTruckRoadV27{
+  0%{transform:translateX(-105px)}
+  50%{transform:translateX(105px)}
+  100%{transform:translateX(-105px)}
+}
+@keyframes marloweTruckRoadV27Mobile{
+  0%{transform:translateX(-78px)}
+  50%{transform:translateX(78px)}
+  100%{transform:translateX(-78px)}
+}
+@keyframes marloweTruckRoadV27Small{
+  0%{transform:translateX(-66px)}
+  50%{transform:translateX(66px)}
+  100%{transform:translateX(-66px)}
+}
+@media(prefers-reduced-motion:reduce){#supply .marlowe-truck-motion{animation:none!important}}
+</style>
+<script id="marlowe-v27-final-truck-js">
+(function(){
+  function fix(){
+    var truck=document.querySelector('#supply .marlowe-truck');
+    var motion=document.querySelector('#supply .marlowe-truck-motion');
+    if(!truck||!motion)return;
+    if(window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+    try{
+      truck.getAnimations().forEach(function(a){a.cancel()});
+      motion.getAnimations().forEach(function(a){a.cancel()});
+    }catch(e){}
+    truck.style.animation='none';
+    truck.style.transform='none';
+  }
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',fix,{once:true});else fix();
+})();
+</script>
 </head>
 <body><input aria-label="Открыть меню" id="marloweMenuToggle" type="checkbox"/>
 <header class="nav">
@@ -1770,8 +2641,9 @@ a{color:inherit;text-decoration:none}
 <!-- distant hills / destination -->
 <path class="delivery-hills" d="M70 178 Q180 120 300 166 T540 160 T770 170 T1000 145 T1130 160"></path>
 <path class="delivery-sun" d="M985 78 a34 34 0 1 0 0 .1"></path>
+
 <!-- truck -->
-<g class="marlowe-truck">
+<g class="marlowe-truck-motion"><g class="marlowe-truck">
 <!-- compact box delivery truck -->
 <path class="truck-body" d="M382 112 H626 Q640 112 646 124 V191 H382Z"></path>
 <path class="truck-cab" d="M646 137 H704 Q720 137 731 151 L748 169 V191 H646Z"></path>
@@ -1780,14 +2652,14 @@ a{color:inherit;text-decoration:none}
 <!-- Marlowe branding panel: deliberately wider than the lettering -->
 <rect class="truck-logo-panel" height="43" rx="1.5" width="212" x="395" y="127"></rect>
 <text class="truck-logo" lengthadjust="spacingAndGlyphs" text-anchor="middle" textlength="168" x="501" y="151">MARLOWE WINERY</text>
-<text class="truck-sub" lengthadjust="spacingAndGlyphs" text-anchor="middle" textlength="118" x="501" y="162.5">PRIVATE ESTATE · EST. 1987</text>
+<text class="truck-sub" lengthadjust="spacingAndGlyphs" text-anchor="middle" textlength="118" x="501" y="162.5"></text>
 <!-- proportionally smaller wheels -->
-<circle class="truck-wheel outer" cx="423" cy="194" r="17"></circle>
-<circle class="truck-wheel inner" cx="423" cy="194" r="6"></circle>
-<circle class="truck-wheel outer" cx="688" cy="194" r="17"></circle>
-<circle class="truck-wheel inner" cx="688" cy="194" r="6"></circle>
+<circle class="truck-wheel outer" cx="423" cy="194" r="17" fill="#f1eadf" stroke="#35271e" stroke-width="3.5"></circle>
+<circle class="truck-wheel inner" cx="423" cy="194" r="6" fill="#a6783d"></circle>
+<circle class="truck-wheel outer" cx="688" cy="194" r="17" fill="#f1eadf" stroke="#35271e" stroke-width="3.5"></circle>
+<circle class="truck-wheel inner" cx="688" cy="194" r="6" fill="#a6783d"></circle>
 <path class="truck-highlight" d="M396 116 H616"></path>
-</g>
+</g></g>
 <!-- subtle dust / road movement -->
 <g class="delivery-dust">
 <circle cx="270" cy="205" r="3"></circle>
@@ -1827,8 +2699,9 @@ a{color:inherit;text-decoration:none}
 <p class="lead" style="margin:0 auto;max-width:700px">Вино. Гостеприимство. Место, в котором хочется остаться.</p>
 </section>
 </main>
-<footer class="footer"><span>Marlowe Winery</span><span>Вино · Наследие · Резиденция</span><span>© 2026</span><div class="impala-credit">Сайт сделан руками <strong>IMPALA</strong> · Discord: <span>impala0500</span></div>
-<div class="impala-credit">Сайт сделан руками <strong>IMPALA</strong>. Discord: impala0500.</div>
+<footer class="footer"><span>Marlowe Winery</span><span>Вино · Наследие · Резиденция</span><span>© 2026</span><div class="impala-credit">Сайт сделан руками <strong>IMPALA</strong>. Discord: impala0500.</div>
+
+
 </footer>
 <script>const io=new IntersectionObserver((entries)=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});document.querySelectorAll('.reveal').forEach(el=>io.observe(el));</script>
 <script id="marlowe-scroll-progress">
@@ -1853,5 +2726,366 @@ a{color:inherit;text-decoration:none}
     }
   },{passive:true});
 })();
-</script></body>
+</script>
+<script id="marlowe-mobile-v18-motion">
+(function(){
+  if (window.__marloweV18Motion) return;
+  window.__marloweV18Motion = true;
+
+  function init(){
+    if (!window.matchMedia || !window.matchMedia('(max-width: 900px)').matches) return;
+
+    var selectors = [
+      '.section-head',
+      '.marlowe-craft-animation',
+      '#supply .marlowe-delivery-animation',
+      '#territory .service',
+      '#wine article',
+      '.journal-grid article',
+      '.owner'
+    ];
+
+    var items = [];
+    selectors.forEach(function(sel){
+      document.querySelectorAll(sel).forEach(function(el){
+        if (!el.classList.contains('marlowe-v18-reveal')){
+          el.classList.add('marlowe-v18-reveal');
+          items.push(el);
+        }
+      });
+    });
+
+    if (!('IntersectionObserver' in window)){
+      items.forEach(function(el){ el.classList.add('marlowe-v18-visible'); });
+      return;
+    }
+
+    var observer = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if (entry.isIntersecting){
+          entry.target.classList.add('marlowe-v18-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {threshold:0.12, rootMargin:'0px 0px -6% 0px'});
+
+    items.forEach(function(el){ observer.observe(el); });
+  }
+
+  if (document.readyState === 'loading'){
+    document.addEventListener('DOMContentLoaded', init, {once:true});
+  } else {
+    init();
+  }
+})();
+</script>
+
+<style id="marlowe-mobile-v21-final-fixes">
+/* V21 — fixes based on real iPhone mobile screenshots.
+   Desktop rules remain untouched. */
+@media (max-width:900px){
+
+  /* =========================================================
+     1. DARK SECTIONS — all copy must stay readable
+     ========================================================= */
+  #territory,
+  #territory .section-head,
+  #territory .reveal,
+  #territory .service,
+  #territory .location{
+    color:#f8f1e7!important;
+  }
+
+  #territory .lead,
+  #territory .body,
+  #territory p,
+  #territory .service p,
+  #territory .location p{
+    color:rgba(248,241,231,.82)!important;
+  }
+
+  #territory .service h3,
+  #territory .location h3{
+    color:#f8f1e7!important;
+  }
+
+  #territory .service,
+  #territory .location{
+    border-color:rgba(248,241,231,.22)!important;
+  }
+
+  /* Wine section uses a dark background too. */
+  #wine,
+  #wine .wine-intro,
+  #wine article{
+    color:#f8f1e7!important;
+  }
+
+  #wine .lead,
+  #wine .body,
+  #wine .mw-wine-desc,
+  #wine article p{
+    color:rgba(248,241,231,.82)!important;
+  }
+
+  #wine .mw-wine-name,
+  #wine article h3{
+    color:#f8f1e7!important;
+  }
+
+  /* Owner block: cream typography on the dark panel. */
+  #owner,
+  #owner .owner-copy,
+  #owner .owner-copy h2,
+  #owner .owner-copy .body{
+    color:#f8f1e7!important;
+  }
+
+  #owner .owner-copy .body{
+    color:rgba(248,241,231,.78)!important;
+  }
+
+  #owner .owner-copy .kicker{
+    color:#a07a45!important;
+    opacity:1!important;
+  }
+
+  /* =========================================================
+     2. PRODUCTION ANIMATION — restore real side margins
+     ========================================================= */
+  #production .marlowe-craft-animation{
+    width:100%!important;
+    max-width:100%!important;
+    margin:14px 0 38px!important;
+    padding:8px 0 0!important;
+    min-height:0!important;
+    overflow:hidden!important;
+    display:block!important;
+  }
+
+  #production .marlowe-craft-caption{
+    display:block!important;
+    width:100%!important;
+    margin:0 0 8px!important;
+    padding:0!important;
+    font-size:9px!important;
+    line-height:1.35!important;
+    letter-spacing:.19em!important;
+    white-space:nowrap!important;
+    overflow:visible!important;
+  }
+
+  #production .marlowe-craft-svg{
+    display:block!important;
+    width:100%!important;
+    max-width:100%!important;
+    min-height:0!important;
+    height:auto!important;
+    margin:0!important;
+  }
+
+  /* Do not let the old 136% rule come back on narrow iPhones. */
+  @media (max-width:390px){
+    #production .marlowe-craft-svg{
+      width:100%!important;
+      max-width:100%!important;
+    }
+  }
+
+  /* =========================================================
+     3. DELIVERY — keep the truck as-is, move destination flag
+        into the visible mobile scene
+     ========================================================= */
+  #supply .marlowe-delivery-animation{
+    width:100%!important;
+    max-width:100%!important;
+    margin:14px 0 28px!important;
+    padding:0!important;
+    overflow:hidden!important;
+  }
+
+  #supply .marlowe-delivery-caption{
+    padding:0!important;
+    margin:0 0 6px!important;
+  }
+
+  #supply .marlowe-delivery-svg{
+    width:100%!important;
+    max-width:100%!important;
+    height:auto!important;
+    min-height:0!important;
+    margin:0!important;
+    display:block!important;
+    overflow:visible!important;
+  }
+
+  /* The destination flag sits too far right in the source SVG.
+     Shift only that group left; the truck itself is untouched. */
+  #supply .delivery-destination{
+    transform:translateX(-125px)!important;
+  }
+
+  /* Keep enough scene width around the flag without moving the truck. */
+  #supply .delivery-destination path{
+    vector-effect:non-scaling-stroke;
+  }
+
+  /* =========================================================
+     4. GENERAL MOBILE SPACING
+     ========================================================= */
+  #production,
+  #supply{
+    overflow:hidden!important;
+  }
+
+  #production .section-head,
+  #supply .section-head{
+    margin-bottom:24px!important;
+  }
+
+  /* Readable dark-panel paragraphs everywhere, including
+     elements which are not direct children of .section. */
+  .dark .body,
+  .dark p,
+  .wine .body,
+  .wine p,
+  .owner .body{
+    color:rgba(248,241,231,.82)!important;
+  }
+}
+</style>
+
+
+<style id="marlowe-mobile-v22-readability">
+/* V22 — mobile readability + delivery composition.
+   No desktop styles are changed. */
+@media (max-width:900px){
+
+  /* HERO: light typography over the photographic background. */
+  .hero .kicker{
+    color:#f1e7d8!important;
+    text-shadow:0 1px 10px rgba(0,0,0,.38)!important;
+    opacity:1!important;
+  }
+  .hero .hero-copy{
+    color:#f8f1e7!important;
+    text-shadow:0 1px 12px rgba(0,0,0,.48)!important;
+    opacity:1!important;
+  }
+
+  /* PHILOSOPHY: this is the brown panel visible in the screenshot. */
+  .philosophy,
+  .philosophy .philosophy-inner{
+    color:#f8f1e7!important;
+  }
+  .philosophy .kicker{
+    color:#b68a4d!important;
+    opacity:1!important;
+    text-shadow:none!important;
+  }
+  .philosophy h2{
+    color:#f8f1e7!important;
+    text-shadow:0 1px 8px rgba(0,0,0,.16)!important;
+  }
+  .philosophy p{
+    color:rgba(248,241,231,.82)!important;
+    text-shadow:none!important;
+  }
+
+  /* ALL DARK SECTIONS: never use the dark ink color on brown. */
+  .section.dark,
+  .section.dark .section-head,
+  .section.dark .section-head>div,
+  .section.dark h2,
+  .section.dark h3,
+  .section.dark strong{
+    color:#f8f1e7!important;
+  }
+  .section.dark p{
+    color:rgba(248,241,231,.82)!important;
+  }
+  .section.dark .eyebrow,
+  .section.dark .kicker,
+  .section.dark .label,
+  .section.dark .section-kicker,
+  .section.dark span{
+    color:#b68a4d!important;
+    opacity:1!important;
+  }
+  .section.dark .service,
+  .section.dark .event-grid>div{
+    border-color:rgba(248,241,231,.24)!important;
+  }
+
+  /* WINE SECTION: cream copy on its dark background. */
+  .section.wine,
+  .section.wine h2,
+  .section.wine .mw-wine-name{
+    color:#f8f1e7!important;
+  }
+  .section.wine .kicker,
+  .section.wine .mw-wine-type{
+    color:#b68a4d!important;
+    opacity:1!important;
+  }
+  .section.wine .lead,
+  .section.wine .mw-wine-desc{
+    color:rgba(248,241,231,.82)!important;
+  }
+  .section.wine .mw-wine-card{
+    border-color:rgba(248,241,231,.24)!important;
+  }
+
+  /* OWNER: keep the paragraph readable against the dark panel. */
+  .owner .owner-copy{
+    color:#f8f1e7!important;
+  }
+  .owner .owner-copy .kicker{
+    color:#b68a4d!important;
+    opacity:1!important;
+  }
+  .owner .owner-copy h2{
+    color:#f8f1e7!important;
+  }
+  .owner .owner-copy .body{
+    color:rgba(248,241,231,.80)!important;
+  }
+
+  /* DELIVERY: restore the natural destination position.
+     Previous V21 shifted the flag left too far, making it sit
+     almost against the truck. The truck itself is unchanged. */
+  #supply .delivery-destination{
+    transform:translateX(0)!important;
+  }
+
+  #supply .marlowe-delivery-animation{
+    overflow:hidden!important;
+  }
+
+  #supply .marlowe-delivery-svg{
+    overflow:visible!important;
+  }
+}
+</style>
+
+
+<style id="marlowe-v23-contrast-fix">
+@media (max-width:900px){
+  #philosophy{background:#5a321f!important;color:#f8f1e7!important}
+  #philosophy .philosophy-inner{color:#f8f1e7!important}
+  #philosophy .kicker{color:#c29a5b!important;opacity:1!important}
+  #philosophy h2{color:#fff8ef!important;opacity:1!important}
+  #philosophy p{color:#f1e6d8!important;opacity:1!important;text-shadow:0 1px 3px rgba(0,0,0,.18)!important}
+  #philosophy p::selection{color:#302116;background:#f1e6d8}
+
+  /* Keep light copy readable on every dark mobile block. */
+  .section.dark p.body,.section.wine p.body,.owner-copy p.body{color:rgba(248,241,231,.86)!important;opacity:1!important}
+  .section.dark .lead,.section.wine .lead{color:#f8f1e7!important;opacity:1!important}
+  .section.dark .kicker,.section.wine .kicker,.owner-copy .kicker{color:#c29a5b!important;opacity:1!important}
+
+  /* Delivery destination: give the flag breathing room on narrow screens. */
+  #supply .delivery-destination{transform:translateX(22px)!important}
+}
+</style>
+</body>
 </html>
